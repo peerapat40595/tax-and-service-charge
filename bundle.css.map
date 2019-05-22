@@ -5,8 +5,8 @@
     "../src/App.svelte"
   ],
   "sourcesContent": [
-    "<script>\n\texport let name;\n</script>\n\n<style>\n\th1 {\n\t\tcolor: purple;\n\t}\n</style>\n\n<h1>Hello {name}!</h1>\n"
+    "<script>\n    let name = 'Anonymous'\n\tlet value\n\n\tfunction toNumber(number) {\n        return new Intl.NumberFormat(undefined, { style: 'currency', currency: 'SGD' }).format(number)\n\t}\n\n\t$: valueWithTax = toNumber(value * 1.07)\n\t$: valueWithTaxAndService = toNumber(value * 1.07 * 1.10)\n</script>\n\n<style>\n\th1 {\n\t\tcolor: green;\n\t}\n</style>\n\n<h1>Hello {name}!</h1>\n<input type=\"number\" bind:value=\"{value}\">\n\n<h2>With 7% Tax:</h2>\n<h3>{valueWithTax}</h3>\n<h2>With 7% Tax And 10% Service:</h2>\n<h3>{valueWithTaxAndService}</h3>\n"
   ],
   "names": [],
-  "mappings": "AAKC,EAAE,cAAC,CAAC,AACH,KAAK,CAAE,MAAM,AACd,CAAC"
+  "mappings": "AAaC,EAAE,cAAC,CAAC,AACH,KAAK,CAAE,KAAK,AACb,CAAC"
 }
