@@ -11,9 +11,9 @@
 </script>
 
 <input type="number" bind:value="{value}">
-<h2>With 7% Tax:</h2>
-<h3>{toNumberFormat(valueWithTax)}</h3>
 <h2>With 7% Tax And 10% Service:</h2>
 <h3>{toNumberFormat(valueWithTaxAndService)}</h3>
+<h2>With 7% Tax:</h2>
+<h3>{toNumberFormat(valueWithTax)}</h3>
 <h2>With 10% Service:</h2>
 <h3>{toNumberFormat(valueWithService)}</h3>
